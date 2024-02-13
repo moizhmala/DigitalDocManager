@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>Digital Document Manager</title>
+<link rel="icon" href="img/logo.png" type="image/png">
+
+<link rel="stylesheet" href="css/bootstrap1.min.css" />
+
+<link rel="stylesheet" href="vendors/themefy_icon/themify-icons.css" />
+
+<link rel="stylesheet" href="vendors/swiper_slider/css/swiper.min.css" />
+
+<link rel="stylesheet" href="vendors/select2/css/select2.min.css" />
+
+<link rel="stylesheet" href="vendors/niceselect/css/nice-select.css" />
+
+<link rel="stylesheet" href="vendors/owl_carousel/css/owl.carousel.css" />
+
+<link rel="stylesheet" href="vendors/gijgo/gijgo.min.css" />
+
+<link rel="stylesheet" href="vendors/font_awesome/css/all.min.css" />
+<link rel="stylesheet" href="vendors/tagsinput/tagsinput.css" />
+
+<link rel="stylesheet" href="vendors/datatable/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" href="vendors/datatable/css/responsive.dataTables.min.css" />
+<link rel="stylesheet" href="vendors/datatable/css/buttons.dataTables.min.css" />
+
+<link rel="stylesheet" href="vendors/text_editor/summernote-bs4.css" />
+
+<link rel="stylesheet" href="vendors/morris/morris.css">
+
+<link rel="stylesheet" href="vendors/material_icon/material-icons.css" />
+
+<link rel="stylesheet" href="css/metisMenu.css">
+
+<link rel="stylesheet" href="css/style1.css" />
+<link rel="stylesheet" href="css/colors/default.css" id="colorSkinCSS">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" type="text/css" />
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css' media="screen" />
+</head>
+<body class="crm_body_bg">
+
+
+
+<nav class="sidebar">
+<div class="logo d-flex justify-content-between">
+<a href="index.html"><img src="img/Logo-sm-64.png" alt class="w-50 mx-1 mt-2"><img src="img/etek-logo.png" alt class="w-50 mx-1 mt-2"></a>
+<div class="sidebar_close_icon d-lg-none">
+<i class="ti-close"></i>
+</div>
+</div>
+<ul id="sidebar_menu">
+<li class="side_menu_title">
+<span>Dashboard</span>
+</li>
+<li class>
+<a class="has-arrow" href="index.html" aria-expanded="false">
+
+<img src="img/menu-icon/1.svg" alt>
+<span>Dashboard</span>
+</a>
+
+</li>
+<li class="side_menu_title">
+<span>Applications</span>
+</li>
+<li class="mm-active">
+<a class="has-arrow" href="#" aria-expanded="false">
+<img src="img/menu-icon/2.svg" alt>
+<span>Pages</span>
+</a>
+<ul>
+<li><a href="login.html">Login</a></li>
+<li><a href="register.html">Register</a></li>
+<li><a href="forgot_pass.html">Forgot Password</a></li>
+<li><a class="active" href="new-requisition.html">New Requisition</a></li>
+</ul>
+</li>
+
+
+
+
+</li>
+</ul>
+</nav>
+
+
+<section class="main_content dashboard_part">
+
+<div class="container-fluid g-0">
+<div class="row">
+<div class="col-lg-12 p-0">
+<div class="header_iner d-flex justify-content-between align-items-center">
+<div class="sidebar_icon d-lg-none">
+<i class="ti-menu"></i>
+</div>
+<div class="serach_field-area">
+<div class="search_inner">
+<form action="#">
+<div class="search_field">
+<input type="text" placeholder="Search here...">
+</div>
+<button type="submit"> <img src="img/icon/icon_search.svg" alt> </button>
+</form>
+</div>
+</div>
+<div class="header_right d-flex justify-content-between align-items-center">
+<div class="header_notification_warp d-flex align-items-center">
+<li>
+<a href="#"> <img src="img/icon/bell.svg" alt> </a>
+</li>
+</div>
+<div class="profile_info">
+<img src="https://www.htmlelements.com/demos/images/phonebook/mark.png" alt="#">
+<div class="profile_info_iner">
+<p>Department of Fujairah Municipality </p>
+<h5>Ahmed Alshamshi</h5>
+<div class="profile_info_details">
+<a href="#">My Profile <i class="ti-user"></i></a>
+<a href="#">Settings <i class="ti-settings"></i></a>
+<a href="#">Log Out <i class="ti-shift-left"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="main_content_iner ">
+<div class="container-fluid p-0">
+<div class="row justify-content-center">
+<div class="col-lg-12">
+<div class="white_box mb_30">
+<div class="row justify-content-center">
+<div class="col-lg-12">
+
+<div class="modal-content cs_modal">
+<div class="modal-header">
+<h5 class="modal-title">New Requisition</h5>
+</div>
+<div class="modal-body">
+<form>
+<div class="col-lg-6">
+<div class="row">
+<div class="mb-3">
+<label class="form-label" for="requisitionIDFormControlInput">Requisition ID</label>
+<input type="text" class="form-control" id="requisitionIDFormControlInput" readonly placeholder="(Auto generated)">
+</div>
+<div class="mb-3">
+<label class="form-label" for="TradeNameFormControlInput">Trade Name</label>
+<input type="text" class="form-control" id="TradeNameFormControlInput" placeholder="">
+</div>
+<div class="mb-3">
+<label class="form-label" for="tradeActivitiesFormControlInput">Trade Activities</label>
+<textarea class="form-control" id="tradeActivitiesFormControlInput" rows="2"></textarea>
+</div>
+<div class="mb-3">
+<label class="form-label" for="TradeLocationFormControlInput">Trade Location</label>
+<input type="text" class="form-control" id="TradeLocationFormControlInput" placeholder="">
+</div>
+<div class="mb-3">
+<label class="form-label" for="TradeLicenseNumberFormControlInput">Trade License Number</label>
+<input type="text" class="form-control" id="TradeLicenseNumberFormControlInput" placeholder="">
+</div>
+
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="row">
+
+
+<div class="mb-3 input-group">
+<label class="form-label" for="TradeEstablishmentDateFormControlInput">Trade Establishment Date</label>
+<input type="text" class="form-control date-input" id="TradeEstablishmentDateFormControlInput" placeholder="">
+<label class="input-group-btn" for="TradeEstablishmentDateFormControlInput">
+	<span class="btn btn-default">
+		<span class="glyphicon glyphicon-calendar"></span>
+	</span>
+</label>
+</div>
+
+<div class="mb-3 input-group">
+<label class="form-label" for="TradeReleaseDateFormControlInput">Trade Release Date</label>
+<input type="text" class="form-control date-input" id="TradeReleaseDateFormControlInput" placeholder="">
+<label class="input-group-btn" for="TradeReleaseDateFormControlInput">
+	<span class="btn btn-default">
+		<span class="glyphicon glyphicon-calendar"></span>
+	</span>
+</label>
+</div>
+
+<div class="mb-3 input-group">
+<label class="form-label" for="TradeExpiryDateFormControlInput">Trade Expiry Date</label>
+<input type="text" class="form-control date-input" id="TradeExpiryDateFormControlInput" placeholder="">
+<label class="input-group-btn" for="TradeExpiryDateFormControlInput">
+	<span class="btn btn-default">
+		<span class="glyphicon glyphicon-calendar"></span>
+	</span>
+</label>
+</div>
+
+<div class="mb-3 form-group">
+<label class="form-label" for="PieceNumberFormControlInput">Piece Number</label>
+<input type="text" class="form-control" id="PieceNumberFormControlInput" placeholder="">
+</div>
+
+<div class="mb-3 form-group">
+<label class="form-label" for="NationalityFormControlInput">Nationality</label>
+<select class="form-control" id="NationalityFormControlInput">
+<option selected>United Arab Emirates</option>
+<option>United States</option>
+</select>
+</div>
+<div class="row">&nbsp;</div>
+<div class="mb-3 form-group">
+<label class="form-label" for="CommercialLicenseNumberFormControlInput">Commercial License Number</label>
+<input type="text" class="form-control" id="CommercialLicenseNumberFormControlInput" placeholder="">
+</div>
+
+</div>
+</div>
+
+
+<div class="col-lg-12">
+<div class="row">
+
+</div>
+</div>
+
+
+
+<div class="col-lg-12">
+<div class="row">
+<div class="col-2 align-items-center">
+<a href="#" class="btn_1 full_width text-center">Save</a>
+</div>
+<div class="col-2 align-items-center">
+<a href="#" class="btn_1 full_width text-center">Cancel</a>
+</div>
+</div>
+</div>
+
+</form>
+
+</div>
+
+
+
+</div>
+</div>
+
+
+
+
+
+</div>
+</div>
+</div>
+
+<div class="footer_part">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="footer_iner text-center">
+<p>2020 © Influence - Designed by <a href="#"> <i class="ti-heart"></i> </a><a href="#"> Dashboard</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<script src="js/jquery1-3.4.1.min.js"></script>
+
+<script src="js/popper1.min.js"></script>
+
+<script src="js/bootstrap1.min.js"></script>
+
+<script src="js/metisMenu.js"></script>
+
+<script src="vendors/count_up/jquery.waypoints.min.js"></script>
+
+<script src="vendors/chartlist/Chart.min.js"></script>
+
+<script src="vendors/count_up/jquery.counterup.min.js"></script>
+
+<script src="vendors/swiper_slider/js/swiper.min.js"></script>
+
+<script src="vendors/niceselect/js/jquery.nice-select.min.js"></script>
+
+<script src="vendors/owl_carousel/js/owl.carousel.min.js"></script>
+
+<script src="vendors/gijgo/gijgo.min.js"></script>
+
+<script src="vendors/datatable/js/jquery.dataTables.min.js"></script>
+<script src="vendors/datatable/js/dataTables.responsive.min.js"></script>
+<script src="vendors/datatable/js/dataTables.buttons.min.js"></script>
+<script src="vendors/datatable/js/buttons.flash.min.js"></script>
+<script src="vendors/datatable/js/jszip.min.js"></script>
+<script src="vendors/datatable/js/pdfmake.min.js"></script>
+<script src="vendors/datatable/js/vfs_fonts.js"></script>
+<script src="vendors/datatable/js/buttons.html5.min.js"></script>
+<script src="vendors/datatable/js/buttons.print.min.js"></script>
+<script src="js/chart.min.js"></script>
+
+<script src="vendors/progressbar/jquery.barfiller.js"></script>
+
+<script src="vendors/tagsinput/tagsinput.js"></script>
+
+<script src="vendors/text_editor/summernote-bs4.js"></script>
+<script src="vendors/apex_chart/apexcharts.js"></script>
+
+<script src="js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+		$("#TradeEstablishmentDateFormControlInput").datepicker({ 
+				  format: "dd/mm/yyyy"
+            });
+        });
+		
+		$("#TradeReleaseDateFormControlInput").datepicker({ 
+				  format: "dd/mm/yyyy"
+            });
+        });
+		
+		$("#TradeExpiryDateFormControlInput").datepicker({ 
+				  format: "dd/mm/yyyy"
+            });
+        });
+		
+		
+</script>
+</body>
+</html>
