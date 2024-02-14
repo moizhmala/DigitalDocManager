@@ -39,7 +39,58 @@
 <link rel="stylesheet" href="css/style1.css" />
 <link rel="stylesheet" href="css/colors/default.css" id="colorSkinCSS">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" type="text/css" />
-    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css' media="screen" />
+<link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css' media="screen" />
+<style type="text/css">
+.custom-file {
+    position: relative;
+    display: inline-block;
+    width: 90%;
+    height: calc(1.5em + 0.75rem + 2px);
+    margin-bottom: 20px;
+}
+.custom-file-input {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    margin: 0;
+    opacity: 0;
+}
+.custom-file-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+.custom-file-input:lang(en)~.custom-file-label::after {
+    content: "Browse";
+}
+.custom-file-label::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: block;
+    height: calc(1.5em + 0.75rem);
+    padding: 0.375rem 0.75rem;
+    line-height: 1.5;
+    color: #495057;
+    content: "Browse";
+    background-color: #e9ecef;
+    border-left: inherit;
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+</style>
 </head>
 <body class="crm_body_bg">
 
@@ -177,32 +228,32 @@
 
 <div class="mb-3 input-group">
 <label class="form-label" for="TradeEstablishmentDateFormControlInput">Trade Establishment Date</label>
-<input type="text" class="form-control date-input" id="TradeEstablishmentDateFormControlInput" placeholder="">
-<label class="input-group-btn" for="TradeEstablishmentDateFormControlInput">
-	<span class="btn btn-default">
-		<span class="glyphicon glyphicon-calendar"></span>
-	</span>
-</label>
+<input type="date" class="form-control date-input" id="TradeEstablishmentDateFormControlInput" placeholder="">
+<!-- <label class="input-group-btn" for="TradeEstablishmentDateFormControlInput"> -->
+	<!-- <span class="btn btn-default"> -->
+		<!-- <span class="glyphicon glyphicon-calendar"></span> -->
+	<!-- </span> -->
+<!-- </label> -->
 </div>
 
 <div class="mb-3 input-group">
 <label class="form-label" for="TradeReleaseDateFormControlInput">Trade Release Date</label>
-<input type="text" class="form-control date-input" id="TradeReleaseDateFormControlInput" placeholder="">
-<label class="input-group-btn" for="TradeReleaseDateFormControlInput">
-	<span class="btn btn-default">
-		<span class="glyphicon glyphicon-calendar"></span>
-	</span>
-</label>
+<input type="date" class="form-control date-input" id="TradeReleaseDateFormControlInput" placeholder="">
+<!-- <label class="input-group-btn" for="TradeReleaseDateFormControlInput"> -->
+	<!-- <span class="btn btn-default"> -->
+		<!-- <span class="glyphicon glyphicon-calendar"></span> -->
+	<!-- </span> -->
+<!-- </label> -->
 </div>
 
 <div class="mb-3 input-group">
 <label class="form-label" for="TradeExpiryDateFormControlInput">Trade Expiry Date</label>
-<input type="text" class="form-control date-input" id="TradeExpiryDateFormControlInput" placeholder="">
-<label class="input-group-btn" for="TradeExpiryDateFormControlInput">
-	<span class="btn btn-default">
-		<span class="glyphicon glyphicon-calendar"></span>
-	</span>
-</label>
+<input type="date" class="form-control date-input" id="TradeExpiryDateFormControlInput" placeholder="">
+<!-- <label class="input-group-btn" for="TradeExpiryDateFormControlInput"> -->
+	<!-- <span class="btn btn-default"> -->
+		<!-- <span class="glyphicon glyphicon-calendar"></span> -->
+	<!-- </span> -->
+<!-- </label> -->
 </div>
 
 <div class="mb-3 form-group">
@@ -227,8 +278,46 @@
 </div>
 
 
-<div class="col-lg-12">
+<div class="col-lg-12 mb-5 p-5 border border-secondary rounded">
 <div class="row">
+
+<div class="col-lg-6">
+<div class="row">
+
+<label class="form-label" for="EstablishmentCardFormControlInput">Establishment Card</label>
+<div class="custom-file">
+  <input type="file" class="custom-file-input" id="EstablishmentCardFormControlInput">
+  <label class="custom-file-label" for="EstablishmentCardFormControlInput">Choose file</label>
+</div>
+
+<label class="form-label" for="TradeLicenseFormControlInput">Trade License</label>
+<div class="custom-file">
+  <input type="file" class="custom-file-input" id="TradeLicenseFormControlInput">
+  <label class="custom-file-label" for="TradeLicenseFormControlInput">Choose file</label>
+</div>
+
+</div>
+</div>
+
+
+<div class="col-lg-6">
+<div class="row">
+
+<label class="form-label" for="RequisitionLetterFormControlInput">Requisition Letter</label>
+<div class="custom-file">
+  <input type="file" class="custom-file-input" id="RequisitionLetterFormControlInput">
+  <label class="custom-file-label" for="RequisitionLetterFormControlInput">Choose file</label>
+</div>
+
+
+<label class="form-label" for="StampFormControlInput">Stamp</label>
+<div class="custom-file">
+  <input type="file" class="custom-file-input" id="StampFormControlInput">
+  <label class="custom-file-label" for="StampFormControlInput">Choose file</label>
+</div>
+
+</div>
+</div>
 
 </div>
 </div>
